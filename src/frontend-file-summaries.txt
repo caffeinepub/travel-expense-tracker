@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for trips list and expenses pages, wrapped in a Layout component.",
+  "frontend/src/components/Layout.tsx": "Application layout component with header navigation, main content area with Outlet, and footer with attribution and branding.",
+  "frontend/src/pages/TripsPage.tsx": "Trips management page that displays all trips in a grid with search functionality, allows creating/editing trips via a form modal with enhanced logging for debugging form open/close events, and navigates to expense details.",
+  "frontend/src/pages/ExpensesPage.tsx": "Expense management page for a specific trip showing trip details, expense form, expense list with total, and CSV export functionality with success toast notification.",
+  "frontend/src/components/TripForm.tsx": "Form component for creating and editing trips with enhanced actor readiness checks, comprehensive error handling, detailed console logging for debugging, disabled state management during actor loading, and proper validation using react-hook-form.",
+  "frontend/src/components/TripList.tsx": "Displays all trips in a responsive card grid with edit/delete actions and click-through navigation to expense details; supports filtered trip display with contextual empty states for search results.",
+  "frontend/src/components/ExpenseForm.tsx": "Form component for adding/editing expenses with file upload for bill images, category selection, and upload progress tracking; updated to show ₹ symbol in amount field placeholder and label.",
+  "frontend/src/components/ExpenseList.tsx": "Displays expenses for a trip in cards with category badges, shows auto-calculated total in Indian Rupees (₹), and provides edit/delete/view bill actions plus CSV export button.",
+  "frontend/src/components/BillImageModal.tsx": "Modal dialog component that displays full-size bill images using ExternalBlob.getDirectURL() with expense details formatted in Indian Rupees (₹).",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for all backend operations with enhanced error handling, detailed logging at each step of mutation calls including parameter serialization, improved error messages for actor initialization failures, and proper cache invalidation for trips and expenses.",
+  "frontend/src/utils/exportToExcel.ts": "Utility function that generates CSV files (Excel-compatible) from expense data with proper escaping, formatted columns with ₹ symbol, and a total row using pure JavaScript.",
+  "frontend/src/index.css": "Global styles with earth tone OKLCH color system for light and dark modes featuring warm greens, browns, and beiges with Inter font family.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with earth tone color palette, Inter font family, custom shadows, and design tokens for the expense tracker theme.",
+  "frontend/src/utils/formatCurrency.ts": "Utility function that formats numbers as Indian Rupees with ₹ symbol prefix for consistent currency display across the application."
+}

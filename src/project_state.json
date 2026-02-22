@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Travel Expense Tracker web application with trip management, expense tracking per trip, image uploads for bills, and Excel export functionality",
+  "architectural_notes": [
+    "Backend uses Motoko (Internet Computer) instead of Node.js/Express",
+    "Data stored on Internet Computer blockchain instead of MongoDB",
+    "Frontend: React + TypeScript with Tailwind CSS",
+    "Image storage using Internet Computer's asset canister",
+    "Excel export using browser-side library (ExcelJS)"
+  ],
+  "known_issues": [
+    "Trip creation form submission not working - form doesn't create trip when submitted after being filled out"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-trip-management-ui-with-a-form-to-create-new-trips-trip-name-input-start-date-picker-end-date-picker-optional-description-textarea-and-a-list-view-displaying-all-trips-with-their-name-date-range-and-description-include-edit-and-delete-actions-for-each-trip",
+      "title": "Create a trip management UI with a form to create new trips (trip name input, start date picker, end date picker, optional description textarea) and a list view displaying all trips with their name, date range, and description. Include edit and delete actions for each trip.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-expense-management-ui-for-each-trip-that-includes-a-form-to-add-expenses-title-input-amount-number-input-category-dropdown-with-options-travel-food-hotel-other-date-picker-image-upload-for-bills-optional-notes-textarea-and-displays-all-expenses-for-the-selected-trip-in-a-list-showing-title-amount-category-date-and-a-button-to-view-the-bill-image",
+      "title": "Create an expense management UI for each trip that includes a form to add expenses (title input, amount number input, category dropdown with options Travel/Food/Hotel/Other, date picker, image upload for bills, optional notes textarea) and displays all expenses for the selected trip in a list showing title, amount, category, date, and a button to view the bill image.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-total-expense-amount-at-the-bottom-of-the-expense-list-that-automatically-calculates-the-sum-of-all-expense-amounts-for-the-selected-trip",
+      "title": "Display a total expense amount at the bottom of the expense list that automatically calculates the sum of all expense amounts for the selected trip.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-excel-export-functionality-with-a-button-on-each-trip-s-expense-view-that-generates-an-excel-file-containing-columns-expense-title-category-date-amount-the-last-row-must-display-total-in-the-first-column-and-the-grand-total-of-all-expenses-in-the-amount-column-use-the-exceljs-library-for-generation",
+      "title": "Implement Excel export functionality with a button on each trip's expense view that generates an Excel file containing columns: Expense Title, Category, Date, Amount. The last row must display 'TOTAL' in the first column and the grand total of all expenses in the Amount column. Use the ExcelJS library for generation.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-modern-cohesive-visual-theme-for-the-application-with-a-professional-color-palette-featuring-earth-tones-greens-browns-warm-neutrals-clean-typography-using-a-sans-serif-font-family-card-based-layouts-for-trips-and-expenses-clear-visual-hierarchy-and-consistent-spacing-throughout-the-interface",
+      "title": "Design a modern, cohesive visual theme for the application with a professional color palette featuring earth tones (greens, browns, warm neutrals), clean typography using a sans-serif font family, card-based layouts for trips and expenses, clear visual hierarchy, and consistent spacing throughout the interface.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-all-expense-amounts-in-indian-rupees-format-throughout-the-application-update-expenseform-to-show-prefix-in-the-amount-input-placeholder-update-expenselist-to-display-amounts-as-amount-format-update-the-total-expense-display-to-show-prefix-update-billimagemodal-to-display-the-amount-with-prefix",
+      "title": "Display all expense amounts in Indian Rupees (₹) format throughout the application. Update ExpenseForm to show '₹' prefix in the amount input placeholder. Update ExpenseList to display amounts as '₹{amount}' format. Update the total expense display to show '₹' prefix. Update BillImageModal to display the amount with '₹' prefix.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-search-bar-to-the-trips-list-page-tripspage-tsx-that-allows-users-to-filter-trips-by-trip-name-the-search-should-be-case-insensitive-and-filter-trips-in-real-time-as-the-user-types-position-the-search-bar-above-the-trip-creation-form",
+      "title": "Add a search bar to the trips list page (TripsPage.tsx) that allows users to filter trips by trip name. The search should be case-insensitive and filter trips in real-time as the user types. Position the search bar above the trip creation form.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-trip-creation-form-submission-in-tripform-tsx-to-ensure-trips-are-successfully-created-when-the-form-is-submitted-after-being-filled-out-completely-verify-the-form-validation-data-handling-and-mutation-call-to-createtrip-are-working-correctly",
+      "title": "Debug and fix the trip creation form submission in TripForm.tsx to ensure trips are successfully created when the form is submitted after being filled out completely. Verify the form validation, data handling, and mutation call to createTrip are working correctly.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-error-handling-and-logging-to-the-trip-creation-flow-in-both-tripform-tsx-and-usequeries-ts-to-capture-and-display-any-errors-that-occur-during-form-submission-or-backend-communication",
+      "title": "Add error handling and logging to the trip creation flow in both TripForm.tsx and useQueries.ts to capture and display any errors that occur during form submission or backend communication.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-resolve-all-errors-preventing-trip-creation-in-tripform-tsx-verify-form-submission-logic-data-validation-mutation-handling-and-ensure-the-form-successfully-creates-trips-when-submitted-with-valid-data-trip-name-start-date-end-date-optional-description",
+      "title": "Debug and resolve all errors preventing trip creation in TripForm.tsx. Verify form submission logic, data validation, mutation handling, and ensure the form successfully creates trips when submitted with valid data (trip name, start date, end date, optional description).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-review-and-refactor-the-trip-creation-flow-in-usequeries-ts-to-ensure-the-createtrip-mutation-properly-communicates-with-the-backend-createtrip-operation-handles-the-response-correctly-and-invalidates-the-trips-query-cache-to-refresh-the-list",
+      "title": "Review and refactor the trip creation flow in useQueries.ts to ensure the createTrip mutation properly communicates with the backend createTrip operation, handles the response correctly, and invalidates the trips query cache to refresh the list.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-comprehensive-error-handling-and-detailed-console-logging-throughout-the-entire-trip-creation-flow-tripform-tsx-usequeries-ts-and-backend-main-mo-to-capture-the-exact-error-preventing-trip-creation-log-form-data-before-submission-mutation-parameters-backend-responses-and-any-thrown-errors",
+      "title": "Add comprehensive error handling and detailed console logging throughout the entire trip creation flow (TripForm.tsx, useQueries.ts, and backend/main.mo) to capture the exact error preventing trip creation. Log form data before submission, mutation parameters, backend responses, and any thrown errors.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Trip management system with name, dates, and description",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Expense tracking per trip with title, amount, category, date, notes",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Bill image upload for expenses",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Expense list view with total calculation",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Excel export functionality per trip",
+      "reqIds": [
+        "AR-1",
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a Trip data model in the backend that stores trip name (Text), start date (Text in ISO format), end date (Text in ISO format), description (optional Text), and a unique trip ID. Implement CRUD operations: createTrip, getAllTrips, getTripById, updateTrip, and deleteTrip.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create an Expense data model in the backend that stores expense title (Text), amount (Float), category (Text with values: Travel, Food, Hotel, Other), expense date (Text in ISO format), bill image filename (Text), notes (optional Text), and a reference to the parent trip ID. Implement operations: addExpense, getExpensesByTripId, updateExpense, and deleteExpense.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement bill image upload functionality in the backend that accepts image files (jpg, png), stores them as static assets in frontend/public/assets/bills/, saves the filename with the expense record, and returns the filename to the frontend.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Display expenses in Indian Rupees (₹) currency format",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add search bar to filter/search trips",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Verify the backend createTrip operation in backend/main.mo is correctly handling incoming trip data and returning the created trip with all fields populated including the generated trip ID.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Verify the backend createTrip operation in backend/main.mo correctly processes incoming trip data (name, startDate, endDate, description), generates a unique trip ID, persists the trip to storage, and returns the complete trip object including the ID.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Travel Expense Tracker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

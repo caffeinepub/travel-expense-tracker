@@ -1,0 +1,64 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-debug-and-resolve-all-errors-preventing-trip-creation-in-tripform-tsx-verify-form-submission-logic-data-validation-mutation-handling-and-ensure-the-form-successfully-creates-trips-when-submitted-with-valid-data-trip-name-start-date-end-date-optional-description",
+      "featureTitle": "Debug and resolve all errors preventing trip creation in TripForm.tsx. Verify form submission logic, data validation, mutation handling, and ensure the form successfully creates trips when submitted with valid data (trip name, start date, end date, optional description).",
+      "files": [
+        "frontend/src/components/TripForm.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-review-and-refactor-the-trip-creation-flow-in-usequeries-ts-to-ensure-the-createtrip-mutation-properly-communicates-with-the-backend-createtrip-operation-handles-the-response-correctly-and-invalidates-the-trips-query-cache-to-refresh-the-list",
+      "featureTitle": "Review and refactor the trip creation flow in useQueries.ts to ensure the createTrip mutation properly communicates with the backend createTrip operation, handles the response correctly, and invalidates the trips query cache to refresh the list.",
+      "files": [
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-comprehensive-error-handling-and-detailed-console-logging-throughout-the-entire-trip-creation-flow-tripform-tsx-usequeries-ts-and-backend-main-mo-to-capture-the-exact-error-preventing-trip-creation-log-form-data-before-submission-mutation-parameters-backend-responses-and-any-thrown-errors",
+      "featureTitle": "Add comprehensive error handling and detailed console logging throughout the entire trip creation flow (TripForm.tsx, useQueries.ts, and backend/main.mo) to capture the exact error preventing trip creation. Log form data before submission, mutation parameters, backend responses, and any thrown errors.",
+      "files": [
+        "frontend/src/components/TripForm.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/TripsPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

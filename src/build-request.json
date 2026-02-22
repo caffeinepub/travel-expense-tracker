@@ -1,0 +1,102 @@
+{
+  "kind": "build_request",
+  "title": "Fix trip creation error and rearrange code for successful trip submission",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-14",
+      "text": "Debug and resolve all errors preventing trip creation in TripForm.tsx. Verify form submission logic, data validation, mutation handling, and ensure the form successfully creates trips when submitted with valid data (trip name, start date, end date, optional description).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "Please resolve the error, or rearrange the code I am not able to create trip."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Trip creation form submits successfully without errors",
+        "Created trips appear immediately in the trips list after submission",
+        "Form validation works correctly for all required fields",
+        "Loading states display appropriately during submission",
+        "Success toast notification appears after successful creation"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Review and refactor the trip creation flow in useQueries.ts to ensure the createTrip mutation properly communicates with the backend createTrip operation, handles the response correctly, and invalidates the trips query cache to refresh the list.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "Please resolve the error, or rearrange the code I am not able to create trip."
+        ]
+      },
+      "acceptanceCriteria": [
+        "createTrip mutation in useQueries.ts executes without errors",
+        "Backend response is properly handled and parsed",
+        "Query cache invalidation triggers automatic refetch of trips list",
+        "Mutation errors are caught and logged for debugging"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Verify the backend createTrip operation in backend/main.mo correctly processes incoming trip data (name, startDate, endDate, description), generates a unique trip ID, persists the trip to storage, and returns the complete trip object including the ID.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "Please resolve the error, or rearrange the code I am not able to create trip."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend createTrip function accepts all required trip fields",
+        "Unique trip ID is generated for each new trip",
+        "Trip data is successfully stored in backend storage",
+        "Complete trip object with ID is returned to frontend",
+        "Function handles edge cases and invalid input gracefully"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add comprehensive error handling and detailed console logging throughout the entire trip creation flow (TripForm.tsx, useQueries.ts, and backend/main.mo) to capture the exact error preventing trip creation. Log form data before submission, mutation parameters, backend responses, and any thrown errors.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "Please resolve the error, or rearrange the code I am not able to create trip."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Console logs show form data being submitted",
+        "Mutation execution is logged with parameters",
+        "Backend operation logs incoming requests",
+        "Any errors are caught and logged with full stack traces",
+        "Error messages are displayed to the user via toast notifications"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the backend data model structure for Trip and Expense types",
+    "Maintain compatibility with existing trip and expense features",
+    "Preserve the current UI/UX design and earth-tone visual theme",
+    "Do not change the Internet Identity authentication flow"
+  ],
+  "nonGoals": [
+    "Adding new fields to the trip creation form",
+    "Redesigning the trips list or expense management UI",
+    "Implementing trip deletion or bulk operations",
+    "Adding new expense categories or features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
